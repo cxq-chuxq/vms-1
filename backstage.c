@@ -103,7 +103,7 @@ void Refill(){
         a = scanIn();
     }while(a<0||a>5);
     if(a!=0){
-        l[a-1].number = 10 - l[a-1].number;
+        l[a-1].number = l[a-1].number + (10 - l[a-1].number);
         printf("You have refilled product %c to full.\n",l[a-1].id);
     }
 }

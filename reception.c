@@ -89,6 +89,9 @@ int Coin(){
                 if(sum>=l[i].money){
                     l[i].lamp = 'O';
                 }
+                if(l[i].number==0){
+                    l[i].lamp = 'X';
+                }
             }
             Windows();
         }              
@@ -115,7 +118,7 @@ void Product(){
         if(a!=0){
             printf("You have pressed button %c.\n",l[a-1].id);
             sum = sum - l[a-1].money;
-            if(sum < 0){
+            if(sum < 0||l[a-1].number==0){
                 sum = sum + l[a-1].money;
                 a = 5;
             }else{
